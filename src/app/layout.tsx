@@ -59,7 +59,7 @@ const baiJamjuree = Bai_Jamjuree({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" suppressHydrationWarning={true}>
-      <body className={`${pretendard.className} ${baiJamjuree.variable}`}>
+      <body className={`${pretendard.className} ${baiJamjuree.variable} bg-bg`}>
         <main>{children}</main>
       </body>
     </html>

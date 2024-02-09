@@ -1,3 +1,7 @@
-export default function MainPage() {
-  return <div>page</div>
+import { Header } from '@/components'
+
+const MainPage = () => {
+  return <Header />
 }
+
+export default MainPage
