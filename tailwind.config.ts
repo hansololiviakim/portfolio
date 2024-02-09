@@ -37,8 +37,9 @@ const config: Config = {
       },
       colors: {
         bl: '#161513',
-        re: '#E84D35',
+        dg: '#332F29',
         gr: '#BDB8AD',
+        re: '#E84D35',
         bg: '#F2F1EF',
       },
     },

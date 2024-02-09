@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { HomeLink } from '@/data/Home'
+import { HomeLink } from '@/data/home'
 import { photo } from '../../public/images/etc'
 import { empty } from '../../public/images/shapes'
 import { star } from '../../public/images/icons'
 
 const Home = () => {
   return (
-    <section className="home-size justify-around">
+    <section className="home-size flex-row justify-around">
       <div>
         <h1 className="title-1 flex flex-col justify-center gap-8 font-semibold">
           안녕하세요,
@@ -28,13 +28,13 @@ const Home = () => {
           )}
         </ul>
       </div>
-      <div className="w-500 relative">
+      <div className="relative w-500">
         <Image
           src={empty}
           width={400}
           height={400}
           alt=""
-          className="pos-x-ctr top-22 absolute z-[-1]"
+          className="pos-x-ctr absolute top-22 z-[-1]"
         />
         <Image src={photo} width={474} height={608} alt="" className="" />
       </div>

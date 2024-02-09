@@ -24,22 +24,21 @@
   }
 
   /* size */
+  .header-width {
+    @apply flex-ctr mx-auto max-w-1280;
+  }
   .section-size {
-    @apply max-w-1280 flex-ctr mx-auto;
+    @apply header-width h-[100dvh] flex-col;
   }
   .home-size {
     @apply section-size;
     height: calc(100dvh - 144px);
   }
-  .content-size {
-    @apply section-size flex-col;
-    height: calc(100dvh - 168px);
-  }
   .nav-button {
-    @apply regular-n font-bai h-45 flex-ctr-row mx-15 hover:hover-line relative cursor-pointer font-semibold;
+    @apply regular-n flex-ctr-row hover:hover-line relative mx-15 h-45 cursor-pointer font-bai font-semibold;
   }
   .home-button {
-    @apply font-bai title-5 hover-color font-medium;
+    @apply title-5 hover-color font-bai font-medium;
   }
 
   /* font */
@@ -62,29 +61,32 @@
     @apply text-18 leading-32;
   }
   .large-b {
-    @apply text-18 leading-32 font-bold;
+    @apply text-18 font-bold leading-32;
   }
   .regular-n {
     @apply text-16 leading-24;
   }
   .regular-b {
-    @apply text-16 leading-24 font-bold;
+    @apply text-16 font-bold leading-24;
   }
   .small-n {
     @apply text-14 leading-24;
   }
   .small-b {
-    @apply text-14 leading-24 font-bold;
+    @apply text-14 font-bold leading-24;
   }
   .caption {
-    @apply text-12 leading-36 font-semibold;
+    @apply text-12 font-semibold leading-36;
   }
 
   /* hover */
   .hover-line {
-    @apply text-re after:border-b-1 after:border-bl after:top-34 transition after:absolute after:w-full after:content-[''];
+    @apply text-re transition after:absolute after:top-34 after:w-full after:border-b-1 after:border-bl after:content-[''];
   }
   .hover-color {
-    @apply hover:text-re transition;
+    @apply transition hover:text-re;
+  }
+  .hover-exp-bl {
+    @apply hover:bg-transparent;
   }
 }

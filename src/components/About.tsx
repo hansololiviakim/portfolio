@@ -5,10 +5,10 @@ import { fill } from '../../public/images/shapes'
 const About = () => {
   return (
     <div className="relative">
-      <section className="content-size">
+      <section className="section-size">
         <Title title="About" desc="INTRODUCING MY MINDSET" />
         <div className="flex-ctr-row w-full">
-          <p className="text-65 font-bai leading-70 w-1/2 whitespace-pre-line font-bold">
+          <p className="w-1/2 whitespace-pre-line font-bai text-65 font-bold leading-70">
             Wherever{'\n'}you go,{'\n'}to with{'\n'}all your hearts.
           </p>
           <p className="large-n whitespace-pre-line">

@@ -8,3 +8,11 @@ export type CommonTitleType = {
   title: string
   desc: string
 }
+
+export type ExperiencesType = {
+  id: string
+  title: string
+  desc: string
+  detail: string[]
+  period: string
+}
