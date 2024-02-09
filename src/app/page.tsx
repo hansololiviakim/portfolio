@@ -1,10 +1,11 @@
-import { Header, Home } from '@/components'
+import { Header, Home, About } from '@/components'
 
 const MainPage = () => {
   return (
     <>
       <Header />
       <Home />
+      <About />
     </>
   )
 }

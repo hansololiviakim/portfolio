@@ -3,3 +3,8 @@ export type HomeLinkType = {
   title: string
   url: string
 }
+
+export type CommonTitleType = {
+  title: string
+  desc: string
+}

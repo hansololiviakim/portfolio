@@ -20,19 +20,23 @@
     @apply absolute right-1/2 translate-x-1/2;
   }
   .pos-y-ctr {
-    @apply absolute top-1/2 translate-y-1/2;
+    @apply absolute bottom-1/2 translate-y-1/2;
   }
 
   /* size */
   .section-size {
     @apply max-w-1280 flex-ctr mx-auto;
   }
-  .nav-button {
-    @apply regular-n font-bai h-45 flex-ctr-row mx-15 hover:hover-line relative cursor-pointer font-semibold;
-  }
   .home-size {
     @apply section-size;
     height: calc(100dvh - 144px);
+  }
+  .content-size {
+    @apply section-size flex-col;
+    height: calc(100dvh - 168px);
+  }
+  .nav-button {
+    @apply regular-n font-bai h-45 flex-ctr-row mx-15 hover:hover-line relative cursor-pointer font-semibold;
   }
   .home-button {
     @apply font-bai title-5 hover-color font-medium;
