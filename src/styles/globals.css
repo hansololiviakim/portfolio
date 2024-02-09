@@ -4,19 +4,38 @@
 
 @layer components {
   /* position */
+  .flex-ctr {
+    @apply flex items-center justify-center;
+  }
   .flex-ctr-row {
-    @apply flex flex-row items-center justify-center;
+    @apply flex-ctr flex-row;
   }
   .flex-ctr-col {
-    @apply flex flex-col items-center justify-center;
+    @apply flex-ctr flex-col;
+  }
+  .pos-ctr {
+    @apply absolute left-1/2 top-1/2 translate-x-1/2 translate-y-1/2;
+  }
+  .pos-x-ctr {
+    @apply absolute right-1/2 translate-x-1/2;
+  }
+  .pos-y-ctr {
+    @apply absolute top-1/2 translate-y-1/2;
   }
 
   /* size */
   .section-size {
-    @apply max-w-1280 mx-auto;
+    @apply max-w-1280 flex-ctr mx-auto;
   }
   .nav-button {
     @apply regular-n font-bai h-45 flex-ctr-row mx-15 hover:hover-line relative cursor-pointer font-semibold;
+  }
+  .home-size {
+    @apply section-size;
+    height: calc(100dvh - 144px);
+  }
+  .home-button {
+    @apply font-bai title-5 hover-color font-medium;
   }
 
   /* font */
@@ -60,5 +79,8 @@
   /* hover */
   .hover-line {
     @apply text-re after:border-b-1 after:border-bl after:top-34 transition after:absolute after:w-full after:content-[''];
+  }
+  .hover-color {
+    @apply hover:text-re transition;
   }
 }

@@ -1,7 +1,12 @@
-import { Header } from '@/components'
+import { Header, Home } from '@/components'
 
 const MainPage = () => {
-  return <Header />
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  )
 }
 
 export default MainPage
