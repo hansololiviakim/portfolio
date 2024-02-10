@@ -10,15 +10,15 @@ const Portfolio = () => {
         <Title title="Portfolio" desc="ACCOIMPLISHMENTS & REFONITIONS" />
         <PfBox />
       </section>
-      {['left', 'right'].map((position) => (
+      {['left-[-110px]', 'right-[-110px]'].map((position) => (
         <Image
           key={position}
           src={sun}
           width={260}
           height={420}
           className={`
-            pos-y-ctr z-[-1] ${position}-[-110px]
-            ${position === 'left' ? 'top-[20%]' : 'bottom-[20%]'}
+            pos-y-ctr z-[-1] ${position}
+            ${position.includes('left') ? 'top-[20%]' : 'bottom-[20%]'}
           `}
           alt=""
         />
