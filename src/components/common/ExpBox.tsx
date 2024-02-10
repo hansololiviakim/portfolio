@@ -10,7 +10,7 @@ const ExpBox = () => {
         <div
           key={id}
           className={`
-            flex w-1060 flex-row justify-around border-2 border-bl px-32 py-36
+            flex w-1060 flex-row justify-around border-2 border-bl bg-bg px-32 py-36
             ${id === CAREER ? 'bg-bl text-white' : 'items-center'}
             transition hover:scale-105
           `}

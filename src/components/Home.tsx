@@ -9,7 +9,6 @@ import { star } from '../../public/images/icons'
 
 const Home = () => {
   return (
-    // <section className="home-size relative border border-bl">
     <section className="home-size relative">
       <h1 className="title-1 flex-ctr-col gap-8 font-semibold">
         안녕하세요,

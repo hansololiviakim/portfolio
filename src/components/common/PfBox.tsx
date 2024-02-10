@@ -4,11 +4,11 @@ import { Portfolios } from '@/data/portfolios'
 
 const PfBox = () => {
   return (
-    <div className="flex-ctr-col mt-30 gap-100">
+    <div className="mt-30 flex flex-col gap-100">
       {Portfolios.map(({ id, flag, title, stack, desc, link, src }) => (
         <div
           key={id}
-          className={`${id % 2 ? 'flex-ctr-row' : 'flex-ctr-row flex-row-reverse'} gap-50`}
+          className={`flex items-center justify-between gap-50 ${id % 2 && 'flex-row-reverse'}`}
         >
           <Image
             src={src}

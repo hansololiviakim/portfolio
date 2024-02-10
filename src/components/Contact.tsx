@@ -15,7 +15,7 @@ const Contact = () => {
               key={id}
               href={link}
               target="_blank"
-              className={`regular-b flex-ctr-col h-145 w-350 gap-6 border-2 border-bl font-bai ${id === 'github' && 'bg-bl text-white'}`}
+              className={`regular-b flex-ctr-col h-145 w-350 gap-6 border-2 border-bl bg-bg font-bai ${id === 'github' && 'bg-bl text-white'}`}
             >
               <Image
                 src={`/images/icons/${id}.png`}
