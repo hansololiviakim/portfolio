@@ -1,4 +1,4 @@
-import { Header, Home, About, Experience, Portfolio, Contact, Footer } from '@/components'
+import { Header, Home, About, Experience, Portfolio, Contact, Footer, Console } from '@/components'
 
 const MainPage = () => {
   return (
@@ -10,6 +10,7 @@ const MainPage = () => {
       <Portfolio />
       <Contact />
       <Footer />
+      <Console />
     </>
   )
 }
