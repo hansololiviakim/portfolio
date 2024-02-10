@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import { HomeLinks } from '@/data/homeLinks'
 import Typing from './Typing'
 import { empty } from '../../public/images/shapes'
 import { star } from '../../public/images/icons'
@@ -15,19 +13,6 @@ const Home = () => {
         </strong>
         김한솔입니다.
       </h1>
-      <ul className="ml-5 mt-60 flex items-center gap-16">
-        {HomeLinks.map(({ id, title, url }) =>
-          title ? (
-            <li key={id}>
-              <Link href={url} target="_blank" className="home-button">
-                {title}
-              </Link>
-            </li>
-          ) : (
-            <Image key={id} width={20} height={20} src={star} alt="별모양 아이콘" />
-          ),
-        )}
-      </ul>
       <Image src={empty} alt="" className="absolute z-[-1] opacity-20" />
       {['left', 'right'].map((position) => (
         <Image

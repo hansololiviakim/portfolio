@@ -1,6 +1,6 @@
-import { HomeLinksType } from '@/types/globalTypes'
+import { HeaderLinksType } from '@/types/globalTypes'
 
-export const HomeLinks: HomeLinksType[] = [
+export const HeaderLinks: HeaderLinksType[] = [
   {
     id: 1,
     title: 'GitHub',

@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 
-export type HomeLinksType = {
+export type HeaderLinksType = {
   id: number
   title: string
   url: string

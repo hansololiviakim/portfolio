@@ -38,11 +38,8 @@
     @apply section-size;
     height: calc(100dvh - 260px);
   }
-  .nav-button {
+  .header-button {
     @apply regular-n flex-ctr-row hover:hover-line relative mx-15 h-45 cursor-pointer font-bai font-semibold;
-  }
-  .home-button {
-    @apply title-5 hover-color font-bai font-medium;
   }
 
   /* font */
