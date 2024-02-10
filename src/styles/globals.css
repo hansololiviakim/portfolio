@@ -86,7 +86,4 @@
   .hover-color {
     @apply transition hover:text-re;
   }
-  .hover-exp-bl {
-    @apply hover:bg-transparent;
-  }
 }

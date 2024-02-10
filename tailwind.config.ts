@@ -5,7 +5,7 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      gap: generateUtilities(100),
+      gap: generateUtilities(200),
       columnGap: generateUtilities(100),
       rowGap: generateUtilities(100),
       inset: generateUtilities(200),

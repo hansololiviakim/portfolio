@@ -5,24 +5,20 @@ import { empty } from '../../public/images/shapes'
 const Experience = () => {
   return (
     <div className="relative">
-      <Image
-        src={empty}
-        width={260}
-        height={420}
-        className="pos-y-ctr left-[-110px] z-[-1]"
-        alt=""
-      />
       <section className="section-size">
         <Title title="Experience" desc="CAREER & EDUCATIONS & ACTIVITY" />
         <ExpBox />
       </section>
-      <Image
-        src={empty}
-        width={260}
-        height={420}
-        className="pos-y-ctr right-[-110px] z-[-1]"
-        alt=""
-      />
+      {['left', 'right'].map((position) => (
+        <Image
+          key={position}
+          src={empty}
+          width={260}
+          height={420}
+          className={`pos-y-ctr z-[-1] ${position}-[-110px]`}
+          alt=""
+        />
+      ))}
     </div>
   )
 }
