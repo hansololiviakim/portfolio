@@ -90,4 +90,18 @@
   .hover-color {
     @apply transition hover:text-re;
   }
+
+  .layout-scroll {
+    @apply overflow-y-auto
+      overflow-x-hidden;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #bdb8ad;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
 }

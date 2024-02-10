@@ -59,7 +59,7 @@ const baiJamjuree = Bai_Jamjuree({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" suppressHydrationWarning={true}>
-      <body className={`${pretendard.className} ${baiJamjuree.variable} bg-bg overflow-x-hidden`}>
+      <body className={`${pretendard.className} ${baiJamjuree.variable} layout-scroll bg-bg`}>
         <main>{children}</main>
       </body>
     </html>
