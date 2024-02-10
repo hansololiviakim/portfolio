@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 
-export type HomeLinkType = {
+export type HomeLinksType = {
   id: number
   title: string
   url: string
@@ -12,7 +12,7 @@ export type CommonTitleType = {
 }
 
 export type ExperiencesType = {
-  id: string
+  id: 'CAREER' | 'EDUCATION' | 'ACTIVITY'
   title: string
   desc: string
   detail: string[]
@@ -30,4 +30,10 @@ export type portfoliosType = {
     url: string
   }[]
   src: StaticImageData
+}
+
+export type contactsType = {
+  id: 'mail' | 'github' | 'tistory'
+  contact: string
+  link: string
 }

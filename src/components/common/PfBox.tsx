@@ -22,7 +22,7 @@ const PfBox = () => {
               className={`title-2 font-bold ${/[a-zA-Z]/g.test(title) ? 'font-bai' : 'font-pre'}`}
             >
               {title}
-              <span className="large-n mt-5 block cursor-pointer font-bai font-normal text-gr hover:text-re">
+              <span className="large-n hover:hover-color mt-5 block cursor-pointer font-bai font-normal text-gr">
                 #{stack.join(' #')}
               </span>
             </h2>

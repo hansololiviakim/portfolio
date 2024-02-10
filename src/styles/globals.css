@@ -34,6 +34,10 @@
     @apply section-size;
     height: calc(100dvh - 144px);
   }
+  .contact-size {
+    @apply section-size;
+    height: calc(100dvh - 260px);
+  }
   .nav-button {
     @apply regular-n flex-ctr-row hover:hover-line relative mx-15 h-45 cursor-pointer font-bai font-semibold;
   }
