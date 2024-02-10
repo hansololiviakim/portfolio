@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="flex-ctr h-260 bg-bl font-bai text-gr">
       <div className="header-width flex h-fit w-full items-end justify-around">
-        <p>
+        <div>
           <div className="flex gap-12">
             <Image src={sun} width={32} height={32} alt="" />
             <span className="title-5 font-bold text-white">HANSOL</span>
@@ -16,7 +16,7 @@ const Footer = () => {
             </span>
             <span>This copyright for the design template belongs to Flowbase.</span>
           </div>
-        </p>
+        </div>
         <p>Last Updated 2024-02</p>
       </div>
     </footer>
