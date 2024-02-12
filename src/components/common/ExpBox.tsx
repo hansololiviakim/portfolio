@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Experiences } from '@/data/experience'
 import { company, school } from '../../../public/images/icons'
+import Link from 'next/link'
 
 const ExpBox = () => {
   const CAREER = 'CAREER'
@@ -33,7 +34,21 @@ const ExpBox = () => {
                 {detail &&
                   detail.map((list, idx) => (
                     <li key={idx} className="large-n text-[#E6E3DE]">
-                      {list}
+                      {idx === 0 ? (
+                        <span>
+                          Vue2, Nuxt3를 사용한{' '}
+                          <Link
+                            href="https://casper.hyundai.com"
+                            target="_blank"
+                            className="font-medium underline hover:text-re"
+                          >
+                            현대자동차 캐스퍼 웹 플랫폼
+                          </Link>{' '}
+                          운영
+                        </span>
+                      ) : (
+                        <span>{list}</span>
+                      )}
                     </li>
                   ))}
               </ul>
