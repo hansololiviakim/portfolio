@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bai_Jamjuree } from 'next/font/google'
 import localFont from 'next/font/local'
+import { Analytics } from '@vercel/analytics/react'
 import '@/styles/globals.css'
 
 // * metadata: info
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko" suppressHydrationWarning={true}>
       <body className={`${pretendard.className} ${baiJamjuree.variable} layout-scroll bg-bg`}>
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   )
