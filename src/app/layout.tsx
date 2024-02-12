@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Bai_Jamjuree } from '@next/font/google'
+import { Bai_Jamjuree } from 'next/font/google'
 import localFont from 'next/font/local'
 import '@/styles/globals.css'
 

@@ -42,6 +42,15 @@ const config: Config = {
         re: '#E84D35',
         bg: '#F2F1EF',
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translate3d(0%, 0, 0)' },
+          '100%': { transform: 'translate3d(-50%, 0, 0)' },
+        },
+      },
+      animation: {
+        slide: 'slide 30000ms linear infinite',
+      },
     },
   },
   plugins: [],

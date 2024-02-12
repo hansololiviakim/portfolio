@@ -14,7 +14,7 @@
     @apply flex-ctr flex-col;
   }
   .pos-ctr {
-    @apply absolute left-1/2 top-1/2 translate-x-1/2 translate-y-1/2;
+    @apply absolute bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2;
   }
   .pos-x-ctr {
     @apply absolute right-1/2 translate-x-1/2;
@@ -88,6 +88,7 @@
     @apply transition hover:text-re;
   }
 
+  /* scroll */
   .layout-scroll {
     @apply overflow-y-auto
       overflow-x-hidden;
