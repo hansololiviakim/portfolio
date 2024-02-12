@@ -20,7 +20,7 @@ export const Experiences: ExperiencesType[] = [
     period: '22.03 ~ NOW',
   },
   {
-    id: 'ACTIVITY',
+    id: 'EDUCATION',
     title: '항해99 14기',
     desc: '스파르타 코딩클럽 부트캠프 React 과정 수료',
     detail: [],
