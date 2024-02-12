@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="header-width flex h-fit w-full items-end justify-around">
         <div>
           <div className="flex gap-12">
-            <Image src={sun} width={32} height={32} alt="" />
+            <Image src={sun} width={32} height={32} alt="햇살 모양 아이콘" />
             <span className="title-5 font-bold text-white">HANSOL</span>
           </div>
           <div className="mt-25 flex flex-col">

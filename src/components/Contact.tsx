@@ -35,7 +35,7 @@ const Contact = () => {
           src={star}
           width={30}
           height={30}
-          alt=""
+          alt="별 모양 아이콘"
           className={`absolute z-[-1] ${position === 'left' ? 'left-[10%] top-1/3' : 'right-[10%] top-2/3'}`}
         />
       ))}

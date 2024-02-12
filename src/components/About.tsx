@@ -30,7 +30,7 @@ const About = () => {
         width={260}
         height={420}
         className="pos-y-ctr right-[-110px] z-[-1]"
-        alt=""
+        alt="색이 채워져 있는 아스타 모양 아이콘"
       />
     </div>
   )

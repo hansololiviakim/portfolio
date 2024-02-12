@@ -20,7 +20,7 @@ const Portfolio = () => {
             pos-y-ctr z-[-1] ${position}
             ${position.includes('left') ? 'top-[20%]' : 'bottom-[20%]'}
           `}
-          alt=""
+          alt="햇살 모양 아이콘"
         />
       ))}
     </div>

@@ -16,7 +16,7 @@ const Experience = () => {
           width={260}
           height={420}
           className={`pos-y-ctr z-[-1] ${position}`}
-          alt=""
+          alt="테두리가 있는 아스타 모양 아이콘"
         />
       ))}
     </div>

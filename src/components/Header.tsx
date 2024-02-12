@@ -20,7 +20,7 @@ const Header = () => {
               </Link>
             </li>
           ) : (
-            <Image key={id} width={16} height={16} src={star} alt="별모양 아이콘" />
+            <Image key={id} width={16} height={16} src={star} alt="별 모양 아이콘" />
           ),
         )}
       </ul>

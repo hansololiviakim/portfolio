@@ -10,7 +10,7 @@ const Stack = () => {
       <ul className="flex-ctr-row animate-slide h-full w-fit gap-60">
         {repeatStacks.map((name, idx) => (
           <li key={idx} className="flex-ctr-row large-b w-fit gap-40 font-bai text-white">
-            <Image src={star} width={20} height={20} alt="" />
+            <Image src={star} width={20} height={20} alt="별 모양 아이콘" />
             {name}
           </li>
         ))}

@@ -49,7 +49,7 @@ const config: Config = {
         },
       },
       animation: {
-        slide: 'slide 30000ms linear infinite',
+        slide: 'slide 35000ms linear infinite',
       },
     },
   },
