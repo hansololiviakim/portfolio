@@ -36,7 +36,7 @@ const ExpBox = () => {
                     <li key={idx} className="large-n text-[#E6E3DE]">
                       {idx === 0 ? (
                         <span>
-                          Vue2, Nuxt3를 사용한{' '}
+                          • Vue2, Nuxt3를 사용한{' '}
                           <Link
                             href="https://casper.hyundai.com"
                             target="_blank"
