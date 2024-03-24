@@ -17,7 +17,7 @@ const Footer = () => {
             <span>This copyright for the design template belongs to Flowbase.</span>
           </div>
         </div>
-        <p>Last Updated 2024-02</p>
+        <p>Last Updated 2024-03</p>
       </div>
     </footer>
   )
