@@ -36,7 +36,7 @@ const ExpBox = () => {
                     <li key={idx} className={`large-n ${id === 'CAREER' ? 'text-[#E6E3DE]' : ''}`}>
                       {id === 'CAREER' && idx === 0 ? (
                         <span>
-                          • Vue2, Nuxt3를 사용한{' '}
+                          • Vue2, Nuxt2를 사용한{' '}
                           <Link
                             href="https://casper.hyundai.com"
                             target="_blank"
@@ -44,7 +44,7 @@ const ExpBox = () => {
                           >
                             현대자동차 캐스퍼 웹 플랫폼
                           </Link>{' '}
-                          운영
+                          운영 및 추가 개발
                         </span>
                       ) : id === 'EDUCATION' && idx === 1 ? (
                         <span>
