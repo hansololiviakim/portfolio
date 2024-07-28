@@ -23,6 +23,7 @@ const Header = () => {
             <Image key={id} width={16} height={16} src={star} alt="별 모양 아이콘" />
           ),
         )}
+        <li className="text-sm text-gray-500 mt-3 mr-5">PC화면에 최적화되어 있습니다.</li>
       </ul>
     </nav>
   )

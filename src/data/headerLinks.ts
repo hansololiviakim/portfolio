@@ -21,9 +21,9 @@ export const HeaderLinks: HeaderLinksType[] = [
     title: '',
     url: '',
   },
-  {
-    id: 5,
-    title: 'Resume',
-    url: '',
-  },
+  // {
+  //   id: 5,
+  //   title: 'Resume',
+  //   url: '',
+  // },
 ]

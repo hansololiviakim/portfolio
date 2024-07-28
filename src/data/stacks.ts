@@ -3,6 +3,8 @@ export const Stacks: string[] = [
   'TYPESCRIPT',
   'REACT',
   'NEXT.JS',
+  'VUE',
+  'NUXT.JS',
   'TAILWIND',
   'STYLEDCOMPONENTS',
   'SCSS',
