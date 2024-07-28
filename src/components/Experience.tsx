@@ -52,7 +52,7 @@ const Experience = () => {
                         <span>
                           • 캐스퍼 일렉트릭 프로젝트 참여하여
                           <ExpBox href={`${CASPER_URL}/estimation?estimationUrl=VTAwMDM4MjE5ODMx`} name="견적내기" />
-                          및 견적서 공유, 마이페이지 구매 상세 등 페이지 담당
+                          및 견적서 공유, 마이페이지 구매 상세 등 페이지 개발
                         </span>
                       ) : id === CAREER && idx === 2 ? (
                         <span>
