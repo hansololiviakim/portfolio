@@ -21,13 +21,13 @@ export default function Projects() {
   const currentProject = projectList[currentIdx]
 
   return (
-    <section className="h-dvh" id="projects">
-      <h1 className="flex items-center gap-2 pt-10">
+    <section className="flex h-dvh flex-col items-start justify-center px-8" id="projects">
+      <h1 className="mb-8 flex items-center gap-2">
         <Image src={ImgSparkle} alt="sparkle" width={40} height={40} />
         <span className="text-3xl font-semibold text-[#30466B]">Projects</span>
       </h1>
 
-      <div className="flex-row-center h-[calc(100dvh-5rem)] gap-20">
+      <div className="flex-row-center gap-20 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md">
         <div className="w-100">
           <div className="flex items-center justify-between">
             <button type="button" onClick={handlePrevProject}>
@@ -48,7 +48,7 @@ export default function Projects() {
             alt="project thumbnail"
             width={400}
             height={300}
-            className="mt-10"
+            className="mt-14"
           />
         </div>
 

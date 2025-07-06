@@ -30,7 +30,7 @@ export default function Home() {
   ]
 
   return (
-    <section id="home">
+    <section>
       {/* SSR 환경에서 애니메이션 컨트롤을 위한 hidden checkbox */}
       <input type="checkbox" id="animation-toggle" />
 

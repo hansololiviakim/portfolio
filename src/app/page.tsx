@@ -3,11 +3,11 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ImgLogo } from '@/assets/general'
-import { Home, About, Projects } from '@/app/components'
+import { Home, Projects } from '@/app/components'
 
 export default function MainPage() {
   return (
-    <main className="mx-auto max-w-7xl pt-10">
+    <main className="mx-auto max-w-7xl pt-10" id="home">
       {/* navigation */}
       <nav
         className={clsx(
@@ -37,10 +37,16 @@ export default function MainPage() {
 
       {/* contents */}
       <Home />
-      <About />
+      {/* TODO: About UI 확정 후 구현 */}
+      {/* <About /> */}
       <Suspense fallback={<div className="h-dvh">Loading projects...</div>}>
         <Projects />
       </Suspense>
+
+      {/* footer */}
+      <footer className="flex-row-center h-20 w-full border-t border-gray-300 font-light text-gray-400">
+        © 2025 Hansol Kim all rights reserved.
+      </footer>
     </main>
   )
 }
