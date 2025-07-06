@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -37,7 +38,9 @@ export default function MainPage() {
       {/* contents */}
       <Home />
       <About />
-      <Projects />
+      <Suspense fallback={<div className="h-dvh">Loading projects...</div>}>
+        <Projects />
+      </Suspense>
     </main>
   )
 }
