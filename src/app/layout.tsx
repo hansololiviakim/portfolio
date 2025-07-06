@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import clsx from 'clsx'
 import { Analytics } from '@vercel/analytics/react'
 import '@/styles/globals.css'
 
@@ -58,7 +59,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${pretendard.variable} antialiased`}>{children}</body>
+      <body
+        className={clsx(
+          'min-h-dvh min-w-dvw antialiased',
+          'bg-linear-90 from-[#CCDDFF] to-[#E5EEFF]',
+          pretendard.variable,
+        )}
+      >
+        {children}
+      </body>
+
       <Analytics />
     </html>
   )

@@ -7,4 +7,101 @@
 html,
 body {
   font-family: var(--font-pretendard), sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.flex-row-center {
+  @apply flex flex-row items-center justify-center;
+}
+
+.flex-col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+.position-centered-x {
+  @apply left-1/2 -translate-x-1/2 transform;
+}
+
+.position-centered-y {
+  @apply top-1/2 -translate-y-1/2 transform;
+}
+
+.position-centered-all {
+  @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform;
+}
+
+/* LP 회전 */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Progress bar */
+@keyframes fill-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Progress circle 이동 */
+@keyframes move-circle {
+  from {
+    left: calc(0% - 1rem);
+  }
+  to {
+    left: calc(100% - 1rem);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20000ms linear infinite;
+}
+
+.animate-fill-progress {
+  animation: fill-progress 50000ms linear infinite;
+}
+
+.animate-move-circle {
+  animation: move-circle 50000ms linear infinite;
+}
+
+/* Animation pause control */
+.animation-paused .animate-spin-slow,
+.animation-paused .animate-fill-progress,
+.animation-paused .animate-move-circle {
+  animation-play-state: paused;
+}
+
+/* CSS-only toggle for animation control */
+#animation-toggle {
+  display: none;
+}
+
+#animation-toggle:checked ~ .main-content {
+  animation-play-state: paused;
+}
+
+#animation-toggle:checked ~ .main-content .animate-spin-slow,
+#animation-toggle:checked ~ .main-content .animate-fill-progress,
+#animation-toggle:checked ~ .main-content .animate-move-circle {
+  animation-play-state: paused;
 }
