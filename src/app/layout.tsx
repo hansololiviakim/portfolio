@@ -7,7 +7,7 @@ import '@/styles/globals.css'
 // * metadata: info
 export const metadata: Metadata = {
   title: '김한솔 | 포트폴리오',
-  description: 'UX를 생각하는 프론트엔드 개발자 김한솔의 포트폴리오입니다.',
+  description: '프론트엔드 개발자에서 엔지니어로 성장해나가는 김한솔입니다.',
   applicationName: '김한솔 | 포트폴리오',
   keywords: [
     'frontend',
@@ -27,6 +27,22 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: '김한솔 | 포트폴리오',
+    description: '프론트엔드 개발자에서 엔지니어로 성장해나가는 김한솔입니다.',
+    url: 'https://hansololiviakim.com',
+    siteName: '김한솔 | 포트폴리오',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: '김한솔 포트폴리오',
+      },
+    ],
+    locale: 'ko_KR',
+    type: 'website',
   },
   generator: 'Next.js',
   formatDetection: {
