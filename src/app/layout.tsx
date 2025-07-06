@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Bai_Jamjuree } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/react'
 import '@/styles/globals.css'
@@ -51,19 +50,16 @@ const pretendard = localFont({
   display: 'swap',
   variable: '--font-pretendard',
 })
-const baiJamjuree = Bai_Jamjuree({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-bai-jamjuree',
-})
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="ko" suppressHydrationWarning={true}>
-      <body className={`${pretendard.className} ${baiJamjuree.variable} layout-scroll bg-bg`}>
-        <main>{children}</main>
-        <Analytics />
-      </body>
+    <html lang="ko">
+      <body className={`${pretendard.variable} antialiased`}>{children}</body>
+      <Analytics />
     </html>
   )
 }
