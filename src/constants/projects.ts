@@ -1,9 +1,9 @@
-import tmp from '@/assets/projects/tmp.png'
+import { ImgCasper, ImgDawhisky, ImgKiring, ImgTteokguk } from '@/assets/projects'
 
 export const projectList = [
   {
     id: 0,
-    image: tmp,
+    image: ImgCasper,
     title: '현대자동차 캐스퍼',
     type: '실무 프로젝트',
     links: [
@@ -22,7 +22,7 @@ export const projectList = [
   },
   {
     id: 1,
-    image: tmp,
+    image: ImgKiring,
     title: '키링',
     type: '사이드 프로젝트',
     links: [
@@ -50,7 +50,7 @@ export const projectList = [
   },
   {
     id: 2,
-    image: tmp,
+    image: ImgTteokguk,
     title: '니떡국 내떡국',
     type: '사이드 프로젝트',
     links: [
@@ -77,7 +77,7 @@ export const projectList = [
   },
   {
     id: 3,
-    image: tmp,
+    image: ImgDawhisky,
     title: '다위스키',
     type: '사이드 프로젝트',
     links: [

@@ -27,7 +27,7 @@ export default function Projects() {
         <span className="text-3xl font-semibold text-[#30466B]">Projects</span>
       </h1>
 
-      <div className="flex-row-center gap-20 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md">
+      <div className="flex-row-center gap-10 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md">
         <div className="w-100">
           <div className="flex items-center justify-between">
             <button type="button" onClick={handlePrevProject}>

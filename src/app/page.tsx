@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ImgLogo } from '@/assets/general'
-import { Home, Projects } from '@/app/components'
+import { Home, About, Projects } from '@/app/components'
 
 export default function MainPage() {
   return (
@@ -37,8 +37,7 @@ export default function MainPage() {
 
       {/* contents */}
       <Home />
-      {/* TODO: About UI 확정 후 구현 */}
-      {/* <About /> */}
+      <About />
       <Suspense fallback={<div className="h-dvh">Loading projects...</div>}>
         <Projects />
       </Suspense>
