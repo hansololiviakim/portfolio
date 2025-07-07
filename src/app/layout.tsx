@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { Bai_Jamjuree } from 'next/font/google'
+import Head from 'next/head'
 import localFont from 'next/font/local'
+import clsx from 'clsx'
 import { Analytics } from '@vercel/analytics/react'
 import '@/styles/globals.css'
 
 // * metadata: info
 export const metadata: Metadata = {
   title: '김한솔 | 포트폴리오',
-  description: 'UX를 생각하는 프론트엔드 개발자 김한솔의 포트폴리오입니다.',
+  description: '프론트엔드 개발자에서 엔지니어로 성장해나가는 김한솔입니다.',
   applicationName: '김한솔 | 포트폴리오',
   keywords: [
     'frontend',
@@ -27,6 +28,22 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: '김한솔 | 포트폴리오',
+    description: '프론트엔드 개발자에서 엔지니어로 성장해나가는 김한솔입니다.',
+    url: 'https://hansololiviakim.com',
+    siteName: '김한솔 | 포트폴리오',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: '김한솔 포트폴리오',
+      },
+    ],
+    locale: 'ko_KR',
+    type: 'website',
   },
   generator: 'Next.js',
   formatDetection: {
@@ -51,19 +68,28 @@ const pretendard = localFont({
   display: 'swap',
   variable: '--font-pretendard',
 })
-const baiJamjuree = Bai_Jamjuree({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-bai-jamjuree',
-})
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="ko" suppressHydrationWarning={true}>
-      <body className={`${pretendard.className} ${baiJamjuree.variable} layout-scroll bg-bg`}>
-        <main>{children}</main>
-        <Analytics />
+    <html lang="ko">
+      <Head>
+        <meta name="viewport" content="width=1200, user-scalable=yes" />
+      </Head>
+      <body
+        className={clsx(
+          'min-h-dvh min-w-dvw antialiased',
+          'bg-linear-90 from-[#CCDDFF] to-[#E5EEFF]',
+          pretendard.variable,
+        )}
+      >
+        {children}
       </body>
+
+      <Analytics />
     </html>
   )
 }
