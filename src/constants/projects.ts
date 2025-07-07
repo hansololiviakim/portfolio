@@ -93,8 +93,8 @@ export const projectList = [
     desc: '다위스키는 “위스키에 관련된 정보를 한 곳에서 모아 볼 순 없을까?” 라는 물음에서 시작되었습니다.\n풍부한 위스키 경험을 위해 위스키 검색, 기록, 위스키바 탐색 및 줄서기 기능을 제공합니다.',
     techStack: 'React, Recoil, React-Query, Styled-Component',
     features: [
-      '<b>900개 데이터에 무한 스크롤·이미지 Lazy Loading</b>을 적용해 성능을 개선하고,<br />Lighthouse 성능 점수는 60점에서 80점, 검색엔진 최적화 점수는 100점으로 향상시켰습니다.',
-      '<b>페이지별 인증/인가 route와 Axios Interceptor</b> 를 구현하여 중복 코드와 휴먼 감소시켰습니다.',
+      '<b>900개 데이터에 무한 스크롤·이미지 Lazy Loading</b>을 적용해 성능을 개선하고,<br />Lighthouse 성능 점수는 60점에서 80점, 검색엔진 최적화 점수는 85점으로 향상시켰습니다.',
+      '<b>페이지별 인증/인가 route와 Axios Interceptor</b> 를 구현하여 중복 코드와 휴먼 에러를 감소시켰습니다.',
       '<b>추천 검색어(디바운스)·지도 기반 리스트 자동 갱신</b> 등 사용자 편의성을 높이는 핵심 기능을 직접 구현했습니다.',
     ],
   },
