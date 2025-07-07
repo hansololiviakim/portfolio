@@ -1,11 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
+'use client'
+
+import { useState } from 'react'
 import clsx from 'clsx'
+import Link from 'next/link'
+import Image from 'next/image'
 import { ImgProfile } from '@/assets/general'
 import { ImgControl, ImgLp, ImgSparkle, ImgTwinkle } from '@/assets/elements'
-import { ImgBlog, ImgGithub, ImgMail, ImgPlay, ImgResume } from '@/assets/icons'
+import { ImgBlog, ImgGithub, ImgMail, ImgPlay, ImgPause, ImgResume } from '@/assets/icons'
 
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(true)
   const socialButtons = [
     {
       icon: ImgGithub,
@@ -31,9 +35,6 @@ export default function Home() {
 
   return (
     <section>
-      {/* SSR 환경에서 애니메이션 컨트롤을 위한 hidden checkbox */}
-      <input type="checkbox" id="animation-toggle" />
-
       <div className="main-content">
         <section className={clsx('h-[calc(100dvh-6.5rem)]', 'flex-row-center gap-32')} id="home">
           {/* lp */}
@@ -57,7 +58,7 @@ export default function Home() {
               width={400}
               height={400}
               priority
-              className="animate-spin-slow"
+              className={clsx('animate-spin-slow', !isPlaying && 'animate-play-pause')}
             />
             <Image
               src={ImgProfile}
@@ -77,30 +78,28 @@ export default function Home() {
             />
           </div>
           <div>
-            <>
-              {/* introduction */}
-              <h2 className="mb-2 flex items-center gap-2">
-                <Image
-                  src={ImgSparkle}
-                  alt="sparkle"
-                  width={24}
-                  height={24}
-                  priority
-                  className="h-6 w-6 object-contain"
-                />
-                <span className="text-2xl font-medium text-[#767676]">Frontend Developer</span>
-              </h2>
-              <h1 className="mb-8 text-5xl font-semibold text-[#30466B]">Hansol Olivia Kim</h1>
-              <p className="text-lg text-[#767676]">
-                프론트엔드 개발자에서 한 단계 더 성장하여,
-                <br />
-                깊이 있는 엔지니어로 성장하고자 노력하는 김한솔입니다.
-                <br />
-                사용자 경험은 물론, 동료 개발자들의 경험 또한
-                <br />
-                긍정적일 수 있도록 고민하며 개발하는 것을 좋아합니다.
-              </p>
-            </>
+            {/* introduction */}
+            <h2 className="mb-2 flex items-center gap-2">
+              <Image
+                src={ImgSparkle}
+                alt="sparkle"
+                width={24}
+                height={24}
+                priority
+                className="h-6 w-6 object-contain"
+              />
+              <span className="text-2xl font-medium text-[#767676]">Frontend Developer</span>
+            </h2>
+            <h1 className="mb-8 text-5xl font-semibold text-[#30466B]">Hansol Olivia Kim</h1>
+            <p className="text-lg text-[#767676]">
+              프론트엔드 개발자에서 한 단계 더 성장하여,
+              <br />
+              깊이 있는 엔지니어로 성장하고자 노력하는 김한솔입니다.
+              <br />
+              사용자 경험은 물론, 동료 개발자들의 경험 또한
+              <br />
+              긍정적일 수 있도록 고민하며 개발하는 것을 좋아합니다.
+            </p>
 
             {/* progress bar */}
             <div className="relative mt-15">
@@ -116,11 +115,19 @@ export default function Home() {
                 </span>
                 <div
                   id="progress percentage bar"
-                  className="animate-fill-progress absolute top-0 h-3 w-1/4 rounded-full bg-linear-to-r from-[#D7DBF3] to-[#BBC4F4]"
+                  className={clsx(
+                    'absolute top-0 h-3 w-1/4 rounded-full',
+                    'animate-fill-progress bg-linear-to-r from-[#D7DBF3] to-[#BBC4F4]',
+                    !isPlaying && 'animate-play-pause',
+                  )}
                 />
                 <div
                   id="progress circle"
-                  className="position-centered-y animate-move-circle absolute top-1/2 left-[calc(25%-1.5rem)] h-6 w-6 rounded-full bg-white shadow-[0_0_2px_2px_rgba(0,0,0,0.1)]"
+                  className={clsx(
+                    'position-centered-y absolute top-1/2 left-[calc(25%-1.5rem)] h-6 w-6 rounded-full bg-white shadow-[0_0_2px_2px_rgba(0,0,0,0.1)]',
+                    'animate-move-circle',
+                    !isPlaying && 'animate-play-pause',
+                  )}
                 />
               </div>
               <ul className="mt-8 flex items-center justify-between gap-4">
@@ -130,7 +137,12 @@ export default function Home() {
                     className={clsx('relative', button.isPlayButton ? 'h-20 w-20' : 'h-14 w-14')}
                   >
                     {button.isPlayButton ? (
-                      <label htmlFor="animation-toggle" className="cursor-pointer">
+                      <button
+                        type="button"
+                        aria-label={isPlaying ? 'Pause' : 'Play'}
+                        onClick={() => setIsPlaying((prev) => !prev)}
+                        className="relative flex h-20 w-20 cursor-pointer items-center justify-center border-none bg-transparent p-0"
+                      >
                         <Image
                           src={ImgControl}
                           alt="control buttons background"
@@ -138,13 +150,13 @@ export default function Home() {
                           height={80}
                         />
                         <Image
-                          src={button.icon}
-                          alt={button.alt}
+                          src={isPlaying ? ImgPause : ImgPlay}
+                          alt={isPlaying ? 'pause icon' : 'play icon'}
                           width={44}
                           height={44}
-                          className="position-centered-x absolute top-4 left-1/2"
+                          style={{ position: 'absolute', top: 16, left: 18 }}
                         />
-                      </label>
+                      </button>
                     ) : (
                       <Link
                         href={button.link}

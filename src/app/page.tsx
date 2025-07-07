@@ -36,9 +36,11 @@ export default function MainPage() {
       </nav>
 
       {/* contents */}
-      <Home />
+      <Suspense fallback={<div className="h-dvh" />}>
+        <Home />
+      </Suspense>
       <About />
-      <Suspense fallback={<div className="h-dvh">Loading projects...</div>}>
+      <Suspense fallback={<div className="h-dvh" />}>
         <Projects />
       </Suspense>
 

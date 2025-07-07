@@ -4,6 +4,7 @@ import ImgGithub from './github.png'
 import ImgHandShake from './hand-shake.png'
 import ImgLinkedin from './linkedin.png'
 import ImgMail from './mail.png'
+import ImgPause from './pause.png'
 import ImgPlay from './play.png'
 import ImgReact from './react.png'
 import ImgResume from './resume.png'
@@ -16,6 +17,7 @@ export {
   ImgHandShake,
   ImgLinkedin,
   ImgMail,
+  ImgPause,
   ImgPlay,
   ImgReact,
   ImgResume,

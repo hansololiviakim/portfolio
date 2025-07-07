@@ -74,34 +74,19 @@ body::-webkit-scrollbar {
 
 .animate-spin-slow {
   animation: spin-slow 20000ms linear infinite;
+  animation-play-state: running;
 }
 
 .animate-fill-progress {
-  animation: fill-progress 50000ms linear infinite;
+  animation: fill-progress 40000ms linear infinite;
+  animation-play-state: running;
 }
 
 .animate-move-circle {
-  animation: move-circle 50000ms linear infinite;
+  animation: move-circle 40000ms linear infinite;
+  animation-play-state: running;
 }
 
-/* Animation pause control */
-.animation-paused .animate-spin-slow,
-.animation-paused .animate-fill-progress,
-.animation-paused .animate-move-circle {
-  animation-play-state: paused;
-}
-
-/* CSS-only toggle for animation control */
-#animation-toggle {
-  display: none;
-}
-
-#animation-toggle:checked ~ .main-content {
-  animation-play-state: paused;
-}
-
-#animation-toggle:checked ~ .main-content .animate-spin-slow,
-#animation-toggle:checked ~ .main-content .animate-fill-progress,
-#animation-toggle:checked ~ .main-content .animate-move-circle {
+.animate-play-pause {
   animation-play-state: paused;
 }
