@@ -50,7 +50,7 @@ export default function Home() {
               alt="twinkle"
               width={100}
               height={100}
-              className="absolute -top-20 -left-20"
+              className="twinkle-updown absolute -top-20 -left-20"
             />
             <Image
               src={ImgLp}
@@ -79,19 +79,23 @@ export default function Home() {
           </div>
           <div>
             {/* introduction */}
-            <h2 className="mb-2 flex items-center gap-2">
+            <h2 className="fade-slide-up mb-2 flex items-center gap-2">
               <Image
                 src={ImgSparkle}
                 alt="sparkle"
                 width={24}
                 height={24}
                 priority
-                className="h-6 w-6 object-contain"
+                className="fade-in h-6 w-6 object-contain"
               />
-              <span className="text-2xl font-medium text-[#767676]">Frontend Developer</span>
+              <span className="fade-in text-2xl font-medium text-[#767676]">
+                Frontend Developer
+              </span>
             </h2>
-            <h1 className="mb-8 text-5xl font-semibold text-[#30466B]">Hansol Olivia Kim</h1>
-            <p className="text-lg text-[#767676]">
+            <h1 className="fade-slide-up mb-8 text-5xl font-semibold text-[#30466B]">
+              Hansol Olivia Kim
+            </h1>
+            <p className="fade-slide-up text-lg text-[#767676]">
               프론트엔드 개발자에서 한 단계 더 성장하여,
               <br />
               깊이 있는 엔지니어로 성장하고자 노력하는 김한솔입니다.
@@ -187,7 +191,7 @@ export default function Home() {
                 alt="twinkle"
                 width={100}
                 height={100}
-                className="absolute -right-30 -bottom-20"
+                className="twinkle-updown absolute -right-30 -bottom-20"
               />
             </div>
           </div>

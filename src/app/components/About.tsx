@@ -64,6 +64,7 @@ export default function About() {
                   className={clsx(
                     'w-5/12 rounded-xl bg-white/35 p-4 backdrop-blur-md',
                     idx % 2 === 0 ? 'mr-auto' : 'ml-auto',
+                    'transition-all duration-400 hover:scale-105 hover:bg-white/50',
                   )}
                 >
                   <div className="mb-2 flex items-center gap-2">
