@@ -27,12 +27,18 @@ export default function Projects() {
         <span className="text-3xl font-semibold text-[#30466B]">Projects</span>
       </h1>
 
-      <div className="flex-row-center gap-10 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md">
+      <div className="flex-row-center h-164 w-full gap-10 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md">
         <div className="w-100">
           <div className="flex items-center justify-between">
             <button type="button" onClick={handlePrevProject}>
               <span className="sr-only">이전 프로젝트 보기</span>
-              <Image src={ImgArrowLeft} alt="arrow left" width={50} height={50} />
+              <Image
+                src={ImgArrowLeft}
+                alt="arrow left"
+                width={50}
+                height={50}
+                className="arrow-left-animate"
+              />
             </button>
             <h2 className="flex-col-center">
               <span className="text-2xl font-bold text-[#30466B]">{currentProject.title}</span>
@@ -40,7 +46,13 @@ export default function Projects() {
             </h2>
             <button type="button" onClick={handleNextProject}>
               <span className="sr-only">다음 프로젝트 보기</span>
-              <Image src={ImgArrowRight} alt="arrow right" width={50} height={50} />
+              <Image
+                src={ImgArrowRight}
+                alt="arrow right"
+                width={50}
+                height={50}
+                className="arrow-right-animate"
+              />
             </button>
           </div>
           <Image
@@ -124,7 +136,6 @@ export default function Projects() {
               />
               <span>주요 기능 및 특징</span>
             </h2>
-            {/* <ul className="flex flex-col gap-3"> */}
             <ul
               className={clsx(
                 'flex w-full flex-col gap-3 rounded-2xl px-8 py-6 text-[#484848]',

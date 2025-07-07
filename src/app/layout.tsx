@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Head from 'next/head'
 import localFont from 'next/font/local'
 import clsx from 'clsx'
 import { Analytics } from '@vercel/analytics/react'
@@ -75,6 +76,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <Head>
+        <meta name="viewport" content="width=1200, user-scalable=yes" />
+      </Head>
       <body
         className={clsx(
           'min-h-dvh min-w-dvw antialiased',

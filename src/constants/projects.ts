@@ -12,7 +12,7 @@ export const projectList = [
         url: 'https://casper.hyundai.com',
       },
     ],
-    desc: '현대자동차 최초 온라인 판매 차량인 캐스퍼의 웹 플랫폼 운영과 신규 모델 프로젝트에 참여했습니다.\nUI/UX 개선, 신규 모델의 견적 및 계약 로직 구축 등 전반적인 프론트엔드 개발 업무를 수행했습니다.',
+    desc: '현대자동차 최초 온라인 판매 차량인 캐스퍼 플랫폼 운영과 신규 모델 프로젝트에 참여했습니다.\nUI/UX 개선, 신규 모델 견적 및 계약 로직 구축 등 전반적인 프론트엔드 업무를 수행했습니다.',
     techStack: 'Nuxt2, Vue2, Vuex, Scss, Element UI',
     features: [
       '<b>Node.js v14 → v20 업그레이드와 패키지 매니저(yarn → pnpm) 전환</b>을 주도해,<br />가상환경의 메모리 부족 이슈를 해결하고 <b>빌드 시간을 5분에서 1분 40초로 단축</b>했습니다.',
