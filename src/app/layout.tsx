@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: '김한솔 | 포트폴리오',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: '김한솔 포트폴리오',
