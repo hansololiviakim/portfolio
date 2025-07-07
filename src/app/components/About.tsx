@@ -1,7 +1,10 @@
+'use client'
+
 import Image from 'next/image'
 import clsx from 'clsx'
 import { ImgBlueSparkle, ImgControl, ImgSparkle } from '@/assets/elements'
 import { ImgReact, ImgDevelop, ImgHandShake, ImgSprout } from '@/assets/icons'
+import { motion } from 'framer-motion'
 
 export default function About() {
   const timeline = [
@@ -29,10 +32,15 @@ export default function About() {
 
   return (
     <section className="flex h-dvh flex-col items-start justify-center px-8" id="about">
-      <h1 className="mb-16 flex items-center gap-2">
+      <motion.h1
+        className="mb-16 flex items-center gap-2"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+      >
         <Image src={ImgSparkle} alt="sparkle" width={40} height={40} />
         <span className="text-3xl font-semibold text-[#30466B]">About</span>
-      </h1>
+      </motion.h1>
 
       <div className="w-full">
         <div className="relative">
@@ -41,12 +49,16 @@ export default function About() {
 
           <div className="space-y-6">
             {timeline.map((item, idx) => (
-              <div
+              <motion.div
                 key={idx}
                 className={clsx(
                   'relative flex items-center',
                   idx % 2 === 0 ? 'justify-start' : 'justify-end',
                 )}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7, delay: idx * 0.2, ease: 'easeOut' }}
               >
                 <div
                   className={clsx(
@@ -69,21 +81,21 @@ export default function About() {
                     dangerouslySetInnerHTML={{ __html: item.desc }}
                   />
                 </div>
-                <Image
-                  src={ImgControl}
-                  alt="dot"
-                  width={40}
-                  height={40}
+                <motion.div
                   className="absolute top-6 left-1/2 z-10 flex -translate-x-1/2 rounded-full shadow-lg"
-                />
-                <Image
-                  src={item.icon}
-                  alt={`${item.title} icon`}
-                  width={24}
-                  height={24}
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                >
+                  <Image src={ImgControl} alt="dot" width={40} height={40} />
+                </motion.div>
+                <motion.div
                   className="absolute top-7.5 left-1/2 z-20 flex -translate-x-1/2 rounded-full"
-                />
-              </div>
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                >
+                  <Image src={item.icon} alt={`${item.title} icon`} width={24} height={24} />
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>
