@@ -82,7 +82,7 @@ export default function RootLayout({
       <body
         className={clsx(
           'min-h-dvh min-w-dvw antialiased',
-          'bg-linear-90 from-[#CCDDFF] to-[#E5EEFF]',
+          'bg-linear-120 from-[#CFE0FF] to-[#F5F8FF]',
           pretendard.variable,
         )}
       >

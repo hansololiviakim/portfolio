@@ -21,7 +21,7 @@ export default function Home() {
       icon: ImgResume,
       alt: 'resume icon',
       isPlayButton: false,
-      link: '#',
+      link: 'https://www.figma.com/design/x6eS24Q8A4AGDWikkq7diw/%EA%B9%80%ED%95%9C%EC%86%94-%EC%9D%B4%EB%A0%A5%EC%84%9C?node-id=0-1&t=V4L6DTPBZ5JEYRd2-1',
     },
     { icon: ImgPlay, alt: 'play icon', isPlayButton: true, link: '#' },
     { icon: ImgBlog, alt: 'blog icon', isPlayButton: false, link: 'https://oliviakim.tistory.com' },
