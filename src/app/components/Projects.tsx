@@ -21,13 +21,26 @@ export default function Projects() {
   const currentProject = projectList[currentIdx]
 
   return (
-    <section className="flex h-dvh flex-col items-start justify-center px-8" id="projects">
+    <section
+      className={clsx(
+        'my-20 flex flex-col items-start justify-center px-8 py-10',
+        'lg:my-0 lg:h-dvh',
+      )}
+      id="projects"
+    >
       <h1 className="mb-8 flex items-center gap-2">
         <Image src={ImgSparkle} alt="sparkle" width={40} height={40} />
         <span className="text-3xl font-semibold text-[#30466B]">Projects</span>
       </h1>
 
-      <div className="flex-row-center h-164 w-full gap-10 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md">
+      <div
+        className={clsx(
+          'flex w-full items-center justify-center gap-10 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md',
+          'h-full flex-col',
+          'lg:h-164 lg:flex-row',
+        )}
+      >
+        {/* control arrow */}
         <div className="w-100">
           <div className="flex items-center justify-between">
             <button type="button" onClick={handlePrevProject}>
@@ -64,7 +77,7 @@ export default function Projects() {
           />
         </div>
 
-        <div className="flex w-6/10 flex-col gap-8">
+        <div className={clsx('flex w-full flex-col gap-8', 'lg:w-6/10')}>
           {/* 프로젝트 소개 */}
           <div>
             <div className="mb-3 flex items-center justify-between">

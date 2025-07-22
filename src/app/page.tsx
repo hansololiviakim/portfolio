@@ -11,17 +11,12 @@ export default function MainPage() {
       {/* navigation */}
       <nav
         className={clsx(
-          'h-16 rounded-full bg-white/35 px-8 backdrop-blur-md',
+          'mx-4 h-16 rounded-full bg-white/35 px-8 backdrop-blur-md',
           'flex items-center justify-between',
         )}
       >
         <Image src={ImgLogo} alt="logo" width={50} height={50} priority />
         <ul className="flex gap-4 font-medium text-[#30466B]">
-          <li>
-            <Link href="#home" className="transition-colors hover:text-[#1a2e4a]">
-              Home
-            </Link>
-          </li>
           <li>
             <Link href="#about" className="transition-colors hover:text-[#1a2e4a]">
               About
@@ -45,7 +40,7 @@ export default function MainPage() {
       </Suspense>
 
       {/* footer */}
-      <footer className="flex-row-center h-20 w-full border-t border-gray-300 font-light text-gray-400">
+      <footer className="flex-row-center mt-4 h-20 w-full border-t border-gray-300 font-light text-gray-400">
         © 2025 Hansol Kim all rights reserved.
       </footer>
     </main>

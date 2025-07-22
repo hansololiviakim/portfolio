@@ -34,10 +34,6 @@ export const projectList = [
         title: 'FE Github',
         url: 'https://github.com/kitworks-kiring/kiring-frontend',
       },
-      {
-        title: 'Crawler Github',
-        url: 'https://github.com/kitworks-kiring/kiring-map-crawler',
-      },
     ],
     desc: '회사원들이 더 편리하게 직장 생활을 할 수 있는 방법을 고민하며 시작한 프로젝트입니다.\n키링은 회사 근처 식당 리스트, 교통 정보, 캘린더, 커뮤니티 기능을 하나로 모은 올인원 웹앱입니다.',
     techStack: 'Next.js, Typescript, Zustand, Tanstack-Query, TailwindCSS',
@@ -58,11 +54,7 @@ export const projectList = [
         url: 'https://github.com/tteok-guk/tteokguk-front',
       },
       {
-        title: 'Disquiet Article(1)',
-        url: 'https://dis.qa/mO9jQHz',
-      },
-      {
-        title: 'Disquiet Article(2)',
+        title: 'Article',
         url: 'https://dis.qa/edzI3',
       },
     ],

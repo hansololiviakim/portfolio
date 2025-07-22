@@ -36,13 +36,23 @@ export default function Home() {
   return (
     <section>
       <div className="main-content">
-        <section className={clsx('h-[calc(100dvh-6.5rem)]', 'flex-row-center gap-32')} id="home">
+        {/* <section className={clsx('h-[calc(100dvh-6.5rem)]', 'flex-row-center gap-32')} id="home"> */}
+        <section
+          className={clsx(
+            'flex',
+            'mt-[6rem] flex-col items-center gap-14',
+            'lg:mt-0 lg:h-[calc(100dvh-6.5rem)] lg:flex-row lg:justify-center lg:gap-32',
+          )}
+          id="home"
+        >
           {/* lp */}
           <div
             className={clsx(
-              'flex-row-center relative h-112 w-112 rounded-full',
+              'flex-row-center relative rounded-full',
               'bg-linear-to-b from-[#D7DBF3] to-[#BBC4F4]',
               'shadow-[0_0_20px_0_rgba(0,0,0,0.25)]',
+              'h-90 w-90',
+              'lg:h-112 lg:w-112',
             )}
           >
             <Image
@@ -50,7 +60,22 @@ export default function Home() {
               alt="twinkle"
               width={100}
               height={100}
-              className="twinkle-updown absolute -top-20 -left-20"
+              className={clsx(
+                'twinkle-updown absolute',
+                '-top-8 -left-8',
+                'lg:-top-20 lg:-left-20',
+              )}
+            />
+            <Image
+              src={ImgTwinkle}
+              alt="twinkle"
+              width={100}
+              height={100}
+              className={clsx(
+                'twinkle-updown absolute',
+                '-right-8 -bottom-8',
+                'lg:-right-20 lg:-bottom-20',
+              )}
             />
             <Image
               src={ImgLp}
@@ -58,7 +83,12 @@ export default function Home() {
               width={400}
               height={400}
               priority
-              className={clsx('animate-spin-slow', !isPlaying && 'animate-play-pause')}
+              className={clsx(
+                'animate-spin-slow',
+                'h-80 w-80',
+                'lg:h-100 lg:w-100',
+                !isPlaying && 'animate-play-pause',
+              )}
             />
             <Image
               src={ImgProfile}
@@ -66,10 +96,20 @@ export default function Home() {
               width={200}
               height={200}
               priority
-              className="position-centered-all absolute top-1/2 left-1/2"
+              className={clsx(
+                'position-centered-all absolute',
+                'top-1/2 left-1/2',
+                'h-40 w-40',
+                'lg:h-50 lg:w-50',
+              )}
             />
             <div
-              className="position-centered-y absolute top-1/2 -left-24 h-140 w-160 border-4 border-solid border-white/90"
+              className={clsx(
+                'position-centered-y absolute',
+                'border-4 border-solid border-white/90',
+                'top-1/2 -left-14 h-100 w-120',
+                'lg:top-1/2 lg:-left-24 lg:h-140 lg:w-160',
+              )}
               style={{
                 borderRadius: '50%',
                 transform: 'rotate(-35deg) scaleY(0.3)',
@@ -186,13 +226,6 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Image
-                src={ImgTwinkle}
-                alt="twinkle"
-                width={100}
-                height={100}
-                className="twinkle-updown absolute -right-30 -bottom-20"
-              />
             </div>
           </div>
         </section>

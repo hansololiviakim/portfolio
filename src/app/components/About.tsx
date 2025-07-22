@@ -31,7 +31,13 @@ export default function About() {
   ]
 
   return (
-    <section className="flex h-dvh flex-col items-start justify-center px-8" id="about">
+    <section
+      className={clsx(
+        'my-20 flex flex-col items-start justify-center px-8 py-10',
+        'lg:my-0 lg:h-dvh',
+      )}
+      id="about"
+    >
       <motion.h1
         className="mb-16 flex items-center gap-2"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -53,7 +59,7 @@ export default function About() {
                 key={idx}
                 className={clsx(
                   'relative flex items-center',
-                  idx % 2 === 0 ? 'justify-start' : 'justify-end',
+                  idx % 2 === 0 ? 'lg:justify-start' : 'lg:justify-end',
                 )}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -62,9 +68,11 @@ export default function About() {
               >
                 <div
                   className={clsx(
-                    'w-5/12 rounded-xl bg-white/35 p-4 backdrop-blur-md',
+                    'rounded-xl bg-white/35 p-4 backdrop-blur-md',
                     idx % 2 === 0 ? 'mr-auto' : 'ml-auto',
                     'transition-all duration-400 hover:scale-105 hover:bg-white/50',
+                    'w-full',
+                    'lg:w-5/12',
                   )}
                 >
                   <div className="mb-2 flex items-center gap-2">
@@ -78,19 +86,25 @@ export default function About() {
                     <span className="text-xl font-bold text-[#30466B]">{item.title}</span>
                   </div>
                   <p
-                    className="text-justify text-[#484848]"
+                    className={clsx('text-[#484848]', 'lg:text-justify')}
                     dangerouslySetInnerHTML={{ __html: item.desc }}
                   />
                 </div>
                 <motion.div
-                  className="absolute top-6 left-1/2 z-10 flex -translate-x-1/2 rounded-full shadow-lg"
+                  className={clsx(
+                    'absolute top-6 left-1/2 z-10 flex -translate-x-1/2 rounded-full shadow-lg',
+                    'invisible lg:visible',
+                  )}
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 >
                   <Image src={ImgControl} alt="dot" width={40} height={40} />
                 </motion.div>
                 <motion.div
-                  className="absolute top-7.5 left-1/2 z-20 flex -translate-x-1/2 rounded-full"
+                  className={clsx(
+                    'absolute top-7.5 left-1/2 z-20 flex -translate-x-1/2 rounded-full',
+                    'invisible lg:visible',
+                  )}
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 >
