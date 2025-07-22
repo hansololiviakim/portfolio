@@ -24,7 +24,7 @@ export default function Projects() {
     <section
       className={clsx(
         'my-20 flex flex-col items-start justify-center px-8 py-10',
-        'lg:my-0 lg:h-dvh',
+        'lg:my-0 xl:h-dvh',
       )}
       id="projects"
     >
@@ -37,7 +37,7 @@ export default function Projects() {
         className={clsx(
           'flex w-full items-center justify-center gap-10 rounded-2xl bg-white/35 px-6 py-8 backdrop-blur-md',
           'h-full flex-col',
-          'lg:h-164 lg:flex-row',
+          'lg:flex-row xl:h-164',
         )}
       >
         {/* control arrow */}
