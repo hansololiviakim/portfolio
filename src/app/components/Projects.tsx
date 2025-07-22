@@ -89,7 +89,10 @@ export default function Projects() {
           {/* 프로젝트 소개 */}
           <div>
             <div
-              className={clsx('mb-3 flex flex-col justify-between', 'sm:flex-row sm:items-center')}
+              className={clsx(
+                'mb-3 flex flex-col items-start justify-between',
+                'sm:flex-row sm:items-center',
+              )}
             >
               <h2 className={clsx('flex gap-2 text-xl font-bold text-[#30466B]', 'sm:text-2xl')}>
                 <Image
@@ -101,7 +104,12 @@ export default function Projects() {
                 />
                 <span>프로젝트 소개</span>
               </h2>
-              <div className="flex items-center justify-center gap-4 text-[#484848]">
+              <div
+                className={clsx(
+                  'ml-10 flex items-center justify-center gap-4 text-[#484848]',
+                  'sm:ml-0',
+                )}
+              >
                 {currentProject.links.map((link, linkIdx) => (
                   <Link
                     key={linkIdx}
