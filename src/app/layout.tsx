@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <Head>
-        <meta name="viewport" content="width=1200, user-scalable=yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body
         className={clsx(

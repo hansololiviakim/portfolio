@@ -23,7 +23,8 @@ export default function Projects() {
   return (
     <section
       className={clsx(
-        'my-20 flex flex-col items-start justify-center px-8 py-10',
+        'my-10 flex flex-col items-start justify-center px-8 py-10',
+        'sm:my-20',
         'lg:my-0 xl:h-dvh',
       )}
       id="projects"
@@ -42,7 +43,12 @@ export default function Projects() {
       >
         {/* control arrow */}
         <div className="w-100">
-          <div className="flex items-center justify-between">
+          <div
+            className={clsx(
+              'mx-auto flex items-center justify-center gap-4',
+              'sm:w-full sm:justify-between',
+            )}
+          >
             <button type="button" onClick={handlePrevProject}>
               <span className="sr-only">이전 프로젝트 보기</span>
               <Image
@@ -50,11 +56,13 @@ export default function Projects() {
                 alt="arrow left"
                 width={50}
                 height={50}
-                className="arrow-left-animate"
+                className={clsx('arrow-left-animate h-6 w-6', 'sm:h-12 sm:w-12')}
               />
             </button>
             <h2 className="flex-col-center">
-              <span className="text-2xl font-bold text-[#30466B]">{currentProject.title}</span>
+              <span className={clsx('text-xl font-bold text-[#30466B]', 'sm:text-2xl')}>
+                {currentProject.title}
+              </span>
               <span className="mt-1 font-light text-[#767676]">{currentProject.type}</span>
             </h2>
             <button type="button" onClick={handleNextProject}>
@@ -64,7 +72,7 @@ export default function Projects() {
                 alt="arrow right"
                 width={50}
                 height={50}
-                className="arrow-right-animate"
+                className={clsx('arrow-left-animate h-6 w-6', 'sm:h-12 sm:w-12')}
               />
             </button>
           </div>
@@ -73,32 +81,34 @@ export default function Projects() {
             alt="project thumbnail"
             width={400}
             height={300}
-            className="mt-14"
+            className={clsx('mx-auto mt-7 h-40 w-56', 'sm:mt-14 sm:h-66 sm:w-100')}
           />
         </div>
 
         <div className={clsx('flex w-full flex-col gap-8', 'lg:w-6/10')}>
           {/* 프로젝트 소개 */}
           <div>
-            <div className="mb-3 flex items-center justify-between">
-              <h2 className="flex gap-2 text-2xl font-bold text-[#30466B]">
+            <div
+              className={clsx('mb-3 flex flex-col justify-between', 'sm:flex-row sm:items-center')}
+            >
+              <h2 className={clsx('flex gap-2 text-xl font-bold text-[#30466B]', 'sm:text-2xl')}>
                 <Image
                   src={ImgBlueSparkle}
                   alt="dot"
                   width={24}
                   height={24}
-                  className="h-8 w-8 object-contain"
+                  className={clsx('mb-4 h-7 w-7 object-contain', 'sm:mb-0 sm:h-8 sm:w-8')}
                 />
                 <span>프로젝트 소개</span>
               </h2>
-              <div className="flex items-center gap-4 text-[#484848]">
+              <div className="flex items-center justify-center gap-4 text-[#484848]">
                 {currentProject.links.map((link, linkIdx) => (
                   <Link
                     key={linkIdx}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer underline"
+                    className={clsx('cursor-pointer underline')}
                   >
                     {link.title}
                   </Link>
@@ -107,8 +117,9 @@ export default function Projects() {
             </div>
             <p
               className={clsx(
-                'w-full rounded-2xl px-8 py-6 whitespace-pre-wrap text-[#484848]',
+                'w-full rounded-2xl px-6 py-4 whitespace-pre-wrap text-[#484848]',
                 'bg-[#CAD8F8]/70 backdrop-blur-md',
+                'sm:px-8 sm:py-6',
               )}
             >
               {currentProject.desc}
@@ -117,20 +128,21 @@ export default function Projects() {
 
           {/* 기술 스택 */}
           <div>
-            <h2 className="mb-3 flex gap-2 text-2xl font-bold text-[#30466B]">
+            <h2 className={clsx('mb-3 flex gap-2 text-xl font-bold text-[#30466B]', 'sm:text-2xl')}>
               <Image
                 src={ImgBlueSparkle}
                 alt="dot"
                 width={24}
                 height={24}
-                className="h-8 w-8 object-contain"
+                className={clsx('h-7 w-7 object-contain', 'sm:mb-0 sm:h-8 sm:w-8')}
               />
               <span>기술 스택</span>
             </h2>
             <p
               className={clsx(
-                'w-full rounded-2xl px-8 py-6 text-[#484848]',
+                'w-full rounded-2xl px-6 py-4 whitespace-pre-wrap text-[#484848]',
                 'bg-[#CAD8F8]/70 backdrop-blur-md',
+                'sm:px-8 sm:py-6',
               )}
             >
               {currentProject.techStack}
@@ -139,20 +151,21 @@ export default function Projects() {
 
           {/* 주요 기능 및 특징 */}
           <div>
-            <h2 className="mb-3 flex gap-2 text-2xl font-bold text-[#30466B]">
+            <h2 className={clsx('mb-3 flex gap-2 text-xl font-bold text-[#30466B]', 'sm:text-2xl')}>
               <Image
                 src={ImgBlueSparkle}
                 alt="dot"
                 width={24}
                 height={24}
-                className="h-8 w-8 object-contain"
+                className={clsx('h-7 w-7 object-contain', 'sm:mb-0 sm:h-8 sm:w-8')}
               />
               <span>주요 기능 및 특징</span>
             </h2>
             <ul
               className={clsx(
-                'flex w-full flex-col gap-3 rounded-2xl px-8 py-6 text-[#484848]',
+                'flex w-full flex-col gap-3 rounded-2xl px-6 py-4 text-[#484848]',
                 'bg-[#CAD8F8]/70 backdrop-blur-md',
+                'sm:px-8 sm:py-6',
               )}
             >
               {currentProject.features.map((feature, featureIdx) => (

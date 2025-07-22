@@ -33,13 +33,14 @@ export default function About() {
   return (
     <section
       className={clsx(
-        'my-20 flex flex-col items-start justify-center px-8 py-10',
+        'my-10 flex flex-col items-start justify-center px-8 py-10',
+        'sm:my-20',
         'lg:my-0 lg:h-dvh',
       )}
       id="about"
     >
       <motion.h1
-        className="mb-16 flex items-center gap-2"
+        className={clsx('mb-8 flex items-center gap-2', 'lg:mb-16')}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}

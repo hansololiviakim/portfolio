@@ -36,11 +36,11 @@ export default function Home() {
   return (
     <section>
       <div className="main-content">
-        {/* <section className={clsx('h-[calc(100dvh-6.5rem)]', 'flex-row-center gap-32')} id="home"> */}
         <section
           className={clsx(
-            'flex',
-            'mt-[6rem] flex-col items-center gap-14',
+            'flex flex-col items-center gap-14',
+            'mt-[3rem]',
+            'sm:mt-[6rem]',
             'lg:mt-0 lg:h-[calc(100dvh-6.5rem)] lg:flex-row lg:justify-center lg:gap-32',
           )}
           id="home"
@@ -51,7 +51,8 @@ export default function Home() {
               'flex-row-center relative rounded-full',
               'bg-linear-to-b from-[#D7DBF3] to-[#BBC4F4]',
               'shadow-[0_0_20px_0_rgba(0,0,0,0.25)]',
-              'h-90 w-90',
+              'h-72 w-72',
+              'sm:h-90 sm:w-90',
               'lg:h-112 lg:w-112',
             )}
           >
@@ -85,7 +86,8 @@ export default function Home() {
               priority
               className={clsx(
                 'animate-spin-slow',
-                'h-80 w-80',
+                'h-60 w-60',
+                'sm:h-80 sm:w-80',
                 'lg:h-100 lg:w-100',
                 !isPlaying && 'animate-play-pause',
               )}
@@ -99,7 +101,8 @@ export default function Home() {
               className={clsx(
                 'position-centered-all absolute',
                 'top-1/2 left-1/2',
-                'h-40 w-40',
+                'h-32 w-32',
+                'sm:h-40 sm:w-40',
                 'lg:h-50 lg:w-50',
               )}
             />
@@ -107,7 +110,8 @@ export default function Home() {
               className={clsx(
                 'position-centered-y absolute',
                 'border-4 border-solid border-white/90',
-                'top-1/2 -left-14 h-100 w-120',
+                '-left-8 h-60 w-88 sm:top-1/2',
+                'sm:top-1/2 sm:-left-14 sm:h-100 sm:w-120',
                 'lg:top-1/2 lg:-left-24 lg:h-140 lg:w-160',
               )}
               style={{
@@ -117,7 +121,7 @@ export default function Home() {
               }}
             />
           </div>
-          <div>
+          <div className="w-64 sm:w-fit">
             {/* introduction */}
             <h2 className="fade-slide-up mb-2 flex items-center gap-2">
               <Image
@@ -128,20 +132,27 @@ export default function Home() {
                 priority
                 className="fade-in h-6 w-6 object-contain"
               />
-              <span className="fade-in text-2xl font-medium text-[#767676]">
+              <span
+                className={clsx('fade-in font-medium text-[#767676]', 'text-lg', 'sm:text-2xl')}
+              >
                 Frontend Developer
               </span>
             </h2>
-            <h1 className="fade-slide-up mb-8 text-5xl font-semibold text-[#30466B]">
+            <h1
+              className={clsx(
+                'fade-slide-up mb-8 font-semibold text-[#30466B]',
+                'text-3xl',
+                'sm:text-5xl',
+              )}
+            >
               Hansol Olivia Kim
             </h1>
             <p className="fade-slide-up text-lg text-[#767676]">
-              프론트엔드 개발자에서 한 단계 더 성장하여,
-              <br />
+              프론트엔드 개발자에서 한 단계 더 성장하여, <br className="hidden sm:inline" />
               깊이 있는 엔지니어로 성장하고자 노력하는 김한솔입니다.
               <br />
-              사용자 경험은 물론, 동료 개발자들의 경험 또한
-              <br />
+              <br className="inline sm:hidden" />
+              사용자 경험은 물론, 동료 개발자들의 경험 또한 <br className="hidden sm:inline" />
               긍정적일 수 있도록 고민하며 개발하는 것을 좋아합니다.
             </p>
 
@@ -149,7 +160,7 @@ export default function Home() {
             <div className="relative mt-15">
               <div
                 id="progress whole bar"
-                className="relative h-3 w-100 rounded-full bg-white shadow-[0_4px_6px_rgba(0,0,0,0.15)]"
+                className="relative h-3 max-w-100 rounded-full bg-white shadow-[0_4px_6px_rgba(0,0,0,0.15)]"
               >
                 <span className="absolute -top-7 left-0 text-sm font-light text-[#AFAFAF]">
                   Developer
@@ -178,14 +189,20 @@ export default function Home() {
                 {socialButtons.map((button, idx) => (
                   <li
                     key={idx}
-                    className={clsx('relative', button.isPlayButton ? 'h-20 w-20' : 'h-14 w-14')}
+                    className={clsx(
+                      'relative',
+                      button.isPlayButton ? 'h-14 w-14 sm:h-20 sm:w-20' : 'h-14 w-14',
+                    )}
                   >
                     {button.isPlayButton ? (
                       <button
                         type="button"
                         aria-label={isPlaying ? 'Pause' : 'Play'}
                         onClick={() => setIsPlaying((prev) => !prev)}
-                        className="relative flex h-20 w-20 cursor-pointer items-center justify-center border-none bg-transparent p-0"
+                        className={clsx(
+                          'relative flex cursor-pointer items-center justify-center border-none bg-transparent p-0',
+                          'sm:h-20 sm:w-20',
+                        )}
                       >
                         <Image
                           src={ImgControl}
@@ -198,7 +215,10 @@ export default function Home() {
                           alt={isPlaying ? 'pause icon' : 'play icon'}
                           width={44}
                           height={44}
-                          style={{ position: 'absolute', top: 16, left: 18 }}
+                          className={clsx(
+                            'absolute top-1.5 h-6 w-6',
+                            'sm:top-4 sm:left-1/2 sm:h-11 sm:w-11 sm:-translate-x-1/2',
+                          )}
                         />
                       </button>
                     ) : (
@@ -219,7 +239,10 @@ export default function Home() {
                           alt={button.alt}
                           width={32}
                           height={32}
-                          className="position-centered-x absolute top-2.5 left-1/2"
+                          className={clsx(
+                            'absolute top-1.5 left-1/2 h-6 w-6 -translate-x-1/2',
+                            'sm:top-2.5 sm:h-8 sm:w-8',
+                          )}
                         />
                       </Link>
                     )}
