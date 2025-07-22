@@ -72,7 +72,7 @@ export default function Projects() {
                 alt="arrow right"
                 width={50}
                 height={50}
-                className={clsx('arrow-left-animate h-6 w-6', 'sm:h-12 sm:w-12')}
+                className={clsx('arrow-right-animate h-6 w-6', 'sm:h-12 sm:w-12')}
               />
             </button>
           </div>
